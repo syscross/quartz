@@ -258,6 +258,20 @@ plugins:
       priority: 50
       display: all
 layout:
+  afterBody:
+    - comments:
+        provider: giscus
+        options:
+          repo: syscross/comments
+          repoId: R_kgDOUuYvOQ
+          category: General
+          categoryId: DIC_kwDOUuYvOc4DGgfH
+          mapping: pathname
+          strict: false
+          reactionsEnabled: true
+          inputPosition: bottom
+          theme: preferred_color_scheme
+          lang: ko
   groups:
     toolbar:
       priority: 35
