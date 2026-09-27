@@ -1,24 +1,25 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: SysCross
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  baseUrl: syscross.dev
   ignorePatterns:
-    - private
-    - templates
+    - .gitignore
+    - "**/*.sh"
+    - "**/*.json"
     - .obsidian
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Noto Sans Mono
+      body: Noto Sans Mono
+      code: Noto Sans Mono
     colors:
       lightMode:
         light: "#faf8f8"
