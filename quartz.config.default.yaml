@@ -192,13 +192,24 @@ plugins:
       priority: 5
       condition: not-index
   - source: "@quartz-community/comments"
-    enabled: false
+    enabled: true
     options:
       provider: giscus
-      options: {}
+      options:
+        repo: syscross/comments
+        repoId: R_kgDOUuYvOQ
+        category: General
+        categoryId: DIC_kwDOUuYvOc4DGgfH
+        mapping: pathname
+        strict: false
+        reactionsEnabled: true
+        inputPosition: bottom
+        theme: preferred_color_scheme
+        lang: en
     layout:
       position: afterBody
       priority: 10
+      condition: not-index
   - source: "@quartz-community/footer"
     enabled: true
     options:
@@ -258,20 +269,6 @@ plugins:
       priority: 50
       display: all
 layout:
-  afterBody:
-    - comments:
-        provider: giscus
-        options:
-          repo: syscross/comments
-          repoId: R_kgDOUuYvOQ
-          category: General
-          categoryId: DIC_kwDOUuYvOc4DGgfH
-          mapping: pathname
-          strict: false
-          reactionsEnabled: true
-          inputPosition: bottom
-          theme: preferred_color_scheme
-          lang: ko
   groups:
     toolbar:
       priority: 35
