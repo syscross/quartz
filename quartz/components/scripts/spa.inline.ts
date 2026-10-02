@@ -2,6 +2,15 @@ import micromorph from "micromorph"
 import { FullSlug, RelativeURL, getFullSlug, normalizeRelativeURLs } from "../../util/path"
 import { fetchCanonical } from "./util"
 
+function sanitizeUrl(rawUrl: URL): URL {
+  const url = new URL(rawUrl.toString())
+  // 루트("/")가 아닌 경우에만 끝의 trailing slash를 제거
+  if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+    url.pathname = url.pathname.replace(/\/+$/, "")
+  }
+  return url
+}
+
 // adapted from `micromorph`
 // https://github.com/natemoo-re/micromorph
 const NODE_TYPE_ELEMENT = 1
@@ -32,7 +41,8 @@ const getOpts = ({ target }: Event): { url: URL; scroll?: boolean } | undefined 
   if ("routerIgnore" in a.dataset) return
   const { href } = a
   if (!isLocalUrl(href)) return
-  return { url: new URL(href), scroll: "routerNoscroll" in a.dataset ? false : undefined }
+  const url = sanitizeUrl(new URL(href))
+  return { url, scroll: "routerNoscroll" in a.dataset ? false : undefined }
 }
 
 function notifyNav(url: FullSlug) {
@@ -173,7 +183,8 @@ function createRouter() {
     window.addEventListener("popstate", (event) => {
       const { url } = getOpts(event) ?? {}
       if (window.location.hash && window.location.pathname === url?.pathname) return
-      navigate(new URL(window.location.toString()), true)
+      const currentUrl = sanitizeUrl(new URL(window.location.toString()))
+      navigate(currentUrl, true)
       return
     })
   }
