@@ -8,3 +8,25 @@ p.content-meta { display: none; }
 div.markdown-rendered {
   font-family: "Noto Sans Mono CJK JP", "Noto Sans Mono", monospace;
 }
+
+/* table column 2x size */
+.table1fontsize2 td:nth-child(1) { font-size: 2em; min-width: 0 !important; }
+.table2fontsize2 td:nth-child(2) { font-size: 2em; min-width: 0 !important; }
+.table3fontsize2 td:nth-child(3) { font-size: 2em; min-width: 0 !important; }
+.table4fontsize2 td:nth-child(4) { font-size: 2em; min-width: 0 !important; }
+.table5fontsize2 td:nth-child(5) { font-size: 2em; min-width: 0 !important; }
+.table6fontsize2 td:nth-child(6) { font-size: 2em; min-width: 0 !important; }
+.table7fontsize2 td:nth-child(7) { font-size: 2em; min-width: 0 !important; }
+.table8fontsize2 td:nth-child(8) { font-size: 2em; min-width: 0 !important; }
+.table9fontsize2 td:nth-child(9) { font-size: 2em; min-width: 0 !important; }
+
+/* table column 3x size */
+.table1fontsize3 td:nth-child(1) { font-size: 3em; min-width: 0 !important; }
+.table2fontsize3 td:nth-child(2) { font-size: 3em; min-width: 0 !important; }
+.table3fontsize3 td:nth-child(3) { font-size: 3em; min-width: 0 !important; }
+.table4fontsize3 td:nth-child(4) { font-size: 3em; min-width: 0 !important; }
+.table5fontsize3 td:nth-child(5) { font-size: 3em; min-width: 0 !important; }
+.table6fontsize3 td:nth-child(6) { font-size: 3em; min-width: 0 !important; }
+.table7fontsize3 td:nth-child(7) { font-size: 3em; min-width: 0 !important; }
+.table8fontsize3 td:nth-child(8) { font-size: 3em; min-width: 0 !important; }
+.table9fontsize3 td:nth-child(9) { font-size: 3em; min-width: 0 !important; }
