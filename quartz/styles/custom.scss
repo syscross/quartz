@@ -24,6 +24,18 @@ div.markdown-rendered {
     monospace;
 }
 
+table {
+  vertical-align: middle;
+}
+
+article table th,
+article table td,
+div.markdown-rendered table th,
+div.markdown-rendered table td {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+}
+
 /* table column 2x size */
 .table1fontsize2 td:nth-child(1) { font-size: 2em; min-width: 0 !important; }
 .table2fontsize2 td:nth-child(2) { font-size: 2em; min-width: 0 !important; }
