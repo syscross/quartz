@@ -5,8 +5,23 @@
 div.explorer { display: none; }
 h1.article-title { display: none; }
 p.content-meta { display: none; }
+
 div.markdown-rendered {
-  font-family: "Noto Sans Mono CJK JP", "Noto Sans Mono", monospace;
+  font-family:
+    // 1순위: 최우선 로컬 커스텀 폰트 (설치되어 있을 때)
+    "Noto Sans Mono CJK JP",
+    
+    // 2순위: macOS / iOS 내장 일본어 고정폭 폰트
+    "Hiragino Maru Gothic ProN", "Hiragino Sans", "Menlo",
+    
+    // 3순위: Windows 내장 현대식 일본어 고정폭 (Windows 10/11 기본 탑재)
+    "BIZ UDGothic", "UD Digi Kyokasho N-R", "Meiryo",
+    
+    // 4순위: Windows 전통 고정폭 (최후의 보루)
+    "MS Gothic",
+    
+    // 5순위: 일반 모노스페이스 폴백
+    monospace;
 }
 
 /* table column 2x size */
